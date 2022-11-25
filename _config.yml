@@ -27,3 +27,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+comment:
+    provider: "disqus"
+    disqus:
+        shortname: "Bazzi2276"
