@@ -1,61 +1,97 @@
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# WhatATheme
+markdown: kramdown
 
-# Site settings
+# URL of the Site
+url: 'bazzi2276.github.io'
+# Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
+baseurl: 
 
+# Title of the Site
 title: Hyeonbin
-email: bazzi4263@kookmin.ac.kr
-description: > # this means to ignore newlines until "baseurl:"
-  Hi
-url: https://bazzi2276.github.io # the base hostname & protocol for your site, e.g. http://example.com
-permalink: /posts/:categories/:title
+# Description of the Site
+description: Hi
+# URL of Image of the Site
+site-image: /WhatATheme/assets/images/meta.jpg
+# Keywords of the Site
+site-keywords: Site, Template, Theme
+# URL for the Image of custom Favicon
+favicon-url: 
 
-# Footer social links if not provided then the icon would not be visible
-twitter_username: 
-github_username: Bazzi2276
-youtube_username: 
-linkedin_username: 
+# URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
+heroimage: https://images.pexels.com/photos/220444/pexels-photo-220444.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
 
-# Disqus settings (shortname is sufficient)
-disqus_shortname: Bazzi2276
+# Social Media and Contact
+# If you don't want to use any icon, you can leave them blank.
+email: bazzi2276@kookmin.ac.kr
+facebook_username: /
+twitter_username: /
+instagram_username: /
+linkedin_username: /
+github_username:  bazzi2276
+youtube_channel_id: /
+reddit_username: /
+behance_username: /
+dribbble_username: /
+spotify_username: /
 
-# txtpen settings (shortname is sufficient)
-txtpen_sitename: 
+# Google Analytics
+google-analytics: 
+
+# Disqus
+disqus-shortname: Bazzi2276
+
+# Name of the Author
+author-name: JeonHyeonbin
+# URL for the Image of the Author
+author-image: https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png
+# 60 Words About the Author
+author-about: Hello
+# URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
+author-url: https://github.com/bazzi2276
+
+# SASS
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Build settings
-markdown: kramdown
-gems:
+plugins:
+  - jekyll-admin
   - jekyll-feed
-  - jekyll-paginate
-  - jekyll-polyglot
-  - jekyll-seo-tag
+
+# Permalink
+permalink: "blog/:title"
+
+# Compress
+compress_html:
+  clippings: all
+
+# Defaults
+defaults:
+  -
+    scope:
+      type: 'posts'
+    values:
+      layout: post
+      post-image: ""
+      description: ""
+      tags:
+        - ""
+  -
+    scope:
+      type: 'pages'
+    values:
+      layout: page
+
+# Exclude
 exclude:
-  - package.json
-  - Rakefile
-  - node_modules
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
   - Gemfile
-  - console-theme.gemspec
-  - gulpfile.js
-  - assets/js
-  - assets/css
-  - screenshot.png
-  - LICENSE.txt
-  - README.md
-
-# Jekyll paginate settings
-paginate: 5
-paginate_path: "/archive/page:num/"
-
-# Related posts settings
-max_related_posts_num: 4
-
-# sass settings (you can turn this on but please run gulp)
-#sass:
-#  sass_dir: _sass
-#  style: compressed
-
-# Jekyll polyglot settings
-languages: ["en"]
-default_lang: "en"
-exclude_from_localization: ["javascript", "images", "css"]
-parallel_localization: false
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
